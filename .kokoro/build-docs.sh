@@ -10,8 +10,7 @@ env
 # Kokoro currently uses 3.6.1
 pyenv global 3.6.1
 
-# Kokoro exposes this as a file, but the scripts expect just a plain variable.
-export GITHUB_TOKEN=$(cat ${KOKORO_GFILE_DIR}/${GITHUB_TOKEN_FILE})
+export GITHUB_TOKEN=$(cat ${KOKORO_KEYSTORE_DIR}/73713_yoshi-automation-github-key)
 
 # Add github to known hosts.
 ssh-keyscan github.com >> ~/.ssh/known_hosts

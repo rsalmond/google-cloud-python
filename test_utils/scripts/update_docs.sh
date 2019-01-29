@@ -16,7 +16,7 @@
 
 set -ev
 
-GH_OWNER='GoogleCloudPlatform'
+GH_OWNER='googleapis'
 GH_PROJECT_NAME='google-cloud-python'
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -84,8 +84,8 @@ if [[ -z "$(git status --porcelain)" ]]; then
 fi
 
 # Commit to gh-pages branch to apply changes.
-git config --global user.email "dpebot@google.com"
-git config --global user.name "dpebot"
+git config --global user.email "yoshi-automation@google.com"
+git config --global user.name "yoshi-automation"
 git commit -m "Update docs after merge to master."
 
 # NOTE: This may fail if two docs updates (on merges to master)
